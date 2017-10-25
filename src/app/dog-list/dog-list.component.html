@@ -1,8 +1,20 @@
-<!-- Name also changes for these because the name property is binded to the input itself -->
-<dog-details name="Paul" ></dog-details> 
-<dog-details name="Mike"></dog-details>
-<!-- Two way Bind to propertery using [()] -->
-<dog-details [(name)]="michelle"></dog-details>
-<span>{{michelle}}</span>
-<dog-details [(name)]="mikey"></dog-details>
-<span [turnRed]="1 !== 1">{{mikey}}</span>
+<div class="collection">
+
+    <!-- Name also changes for these because the name property is binded to the input itself -->
+    <div class="collection-item">
+        <dog-details  name="Paul" ></dog-details> 
+    </div>
+    <div class="collection-item">
+        <dog-details name="Mike"></dog-details>
+    </div>
+    <div class="collection-item">
+        <!-- Two way Bind to propertery using [()] -->
+        <dog-details [(name)]="michelle"></dog-details>
+        <span>{{michelle}}</span>
+    </div>
+    <div class="collection-item">
+
+        <dog-details [(name)]="mikey"></dog-details>
+        <span [turnRed]="1 !== 1">{{mikey}}</span>
+    </div>
+</div>

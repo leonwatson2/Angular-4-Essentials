@@ -5,7 +5,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
     selector:"dog-details",
     template:`
             <div>
-                <h3>{{name}}</h3>
+                <span>{{name}}</span>
                 <input type="text" (change)="handleChange($event)"/>
             </div>`
 })
