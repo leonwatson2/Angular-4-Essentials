@@ -1,6 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 
-//Component Decorator needed to tell angular that you're creating a component
+//Import input decorator
 @Component({
     selector:"dog-details",// is the css selector that identifies the component in a template
     template:`
@@ -10,8 +10,8 @@ import { Component } from '@angular/core'
             `//template for the view or the HTML used for the component view
 })
 export class DogDetailsComponent{
-    name:String
+    @Input() name:string //use the Input decorator
     constructor(){
-        this.name = "Max"
+        
     }
 }
