@@ -1,5 +1,6 @@
+<!-- Name also changes for these because the name property is binded to the input itself -->
 <dog-details name="Paul" ></dog-details> 
 <dog-details name="Mike"></dog-details>
-<!-- Bind to event using () -->
-<dog-details [name]="michelle" (changeName)="changeMichelle($event)"></dog-details>
-<dog-details [name]="mikey" (changeName)="changeMikey($event)"></dog-details>
+<!-- Two way Bind to propertery using [()] -->
+<dog-details [(name)]="michelle"></dog-details>
+<dog-details [(name)]="mikey"></dog-details>

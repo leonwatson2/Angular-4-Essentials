@@ -6,18 +6,18 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
     template:`
             <div>
                 <h3>{{name}}</h3>
-                <input type="text" (change)="handleChange($event)"/>
+                <input type="text" [(ngModel)]="name"/>
             </div>`
 })
 export class DogDetailsComponent{
     @Input() name:string 
-    @Output() changeName = new EventEmitter<string>()
+    @Output() nameChange = new EventEmitter<string>() //Output must be suffixed with Change
     constructor(){
         
     }
 
     handleChange(e){
-        this.changeName.emit(e.target.value)
+        this.nameChange.emit(e.target.value)
     }
 
 }
