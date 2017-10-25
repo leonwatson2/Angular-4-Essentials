@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'
 
-//import EventEmitter from angular core
+//Component Directive, Directive with a template
 @Component({
     selector:"dog-details",
     template:`
