@@ -7,12 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-  michelle = "Michelle"
-  mikey = "Mikey"
-  changeMichelle(name:string){
-    this.michelle = name
-  }
-  changeMikey(name:string){
-    this.mikey = name
-  }
+
 }
