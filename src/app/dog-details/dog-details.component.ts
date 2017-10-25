@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
     template:`
             <div>
                 <h3>{{name}}</h3>
-                <input type="text" [(ngModel)]="name"/>
+                <input type="text" (change)="handleChange($event)"/>
             </div>`
 })
 export class DogDetailsComponent{
