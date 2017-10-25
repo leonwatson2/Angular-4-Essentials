@@ -1,17 +1,23 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 
-//Import input decorator
+//import EventEmitter from angular core
 @Component({
-    selector:"dog-details",// is the css selector that identifies the component in a template
+    selector:"dog-details",
     template:`
             <div>
                 <h3>{{name}}</h3>
-            </div>
-            `//template for the view or the HTML used for the component view
+                <input type="text" (change)="handleChange($event)"/>
+            </div>`
 })
 export class DogDetailsComponent{
-    @Input() name:string //use the Input decorator
+    @Input() name:string 
+    @Output() changeName = new EventEmitter<string>()
     constructor(){
         
     }
+
+    handleChange(e){
+        this.changeName.emit(e.target.value)
+    }
+
 }

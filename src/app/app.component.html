@@ -1,9 +1,8 @@
 <h1>
   {{title}}
 </h1>
-<!-- Bind with raw string -->
-<dog-details name="Mark"></dog-details> 
+<dog-details name="Mark" ></dog-details> 
 <dog-details name="Mike"></dog-details>
-<!-- Bind with variable -->
-<dog-details [name]="michelle"></dog-details>
-<dog-details [name]="mikey"></dog-details>
+<!-- Bind to event using () -->
+<dog-details [name]="michelle" (changeName)="changeMichelle($event)"></dog-details>
+<dog-details [name]="mikey" (changeName)="changeMikey($event)"></dog-details>
